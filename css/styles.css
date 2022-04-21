@@ -140,7 +140,7 @@ img {
 }
 
 .header-contact-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -150,6 +150,21 @@ img {
 .header-contact-link:hover,
 .header-contact-link:focus {
   color: var(--accent-color);
+}
+
+.header-icon {
+  align-items: center;
+  margin-right: 10px;
+
+  fill: var(--main-text-color);
+}
+
+.header-contact-link:hover .header-icon {
+  fill: var(--accent-color);
+}
+
+.header-contact-link:focus .header-icon {
+  fill: var(--accent-color);
 }
 
 /* HERO */
@@ -238,6 +253,33 @@ img {
   margin-left: 30px;
 }
 
+.benefits-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock1.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut1.svg);
+}
+
 .benefits-item-title {
   margin-bottom: 10px;
 
@@ -296,6 +338,8 @@ img {
 .team {
   padding-top: var(--tipical-padding);
   padding-bottom: var(--tipical-padding);
+
+  background-color: #f5f4fa;
 }
 
 .team-list {
@@ -317,11 +361,16 @@ img {
 .team-item {
   flex-basis: calc((100%-120px) / 4);
   margin-left: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-size {
   padding-top: 30px;
-  padding-bottom: 62px;
+  padding-bottom: 30px;
+
+  background-color: #ffffff;
 }
 
 .team-item-title {
@@ -341,8 +390,98 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 16px;
 
   color: var(--main-text-color);
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-soc-item + .team-soc-item {
+  margin-left: 10px;
+}
+
+.team-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-soc-link:hover .team-soc-icon {
+  fill: #ffffff;
+}
+
+.team-soc-link:focus .team-soc-icon {
+  fill: #ffffff;
+}
+
+.team-soc-icon {
+  fill: #afb1b8;
+}
+
+/* CLIENTS */
+
+.clients {
+  padding-top: var(--tipical-padding);
+  padding-bottom: var(--tipical-padding);
+}
+
+.clients-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+}
+
+.clients-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.clients-item {
+  flex-basis: calc((100%-180px) / 6);
+  margin-left: 30px;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link {
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border: 1px solid #2196f3;
+}
+
+.clients-icon {
+  fill: #afb1b8;
+}
+
+.clients-item:hover .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-item:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* FOOTER */
@@ -351,6 +490,10 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.footer .container {
+  display: flex;
 }
 
 .footer-logo {
@@ -379,9 +522,49 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* .footer-contact-link:last-child {
-  margin-bottom: 0;
-} */
+.footer-soc-contact {
+  display: flex;
+  align-items: baseline;
+  margin-left: 70px;
+}
+
+.footer-soc-contact-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.footer-soc-contact-list {
+  display: flex;
+}
+
+.footer-soc-contact-item + .footer-soc-contact-item {
+  margin-left: 10px;
+}
+
+.footer-soc-contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-soc-contact-link:hover,
+.footer-soc-contact-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-soc-icon {
+  fill: #ffffff;
+}
 
 /* -----------PORTFOLIO------------ */
 
