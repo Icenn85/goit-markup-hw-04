@@ -452,33 +452,29 @@ img {
 
 .clients-list {
   display: flex;
-  margin-left: -30px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.clients-item {
-  flex-basis: calc((100%-180px) / 6);
+.clients-item + .clients-item {
   margin-left: 30px;
-  padding: 16px 32px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 
-.clients-link {
-  justify-content: center;
-  align-items: center;
-}
-
-.clients-item:hover,
-.clients-item:focus {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid #2196f3;
-}
-
-.clients-icon {
-  fill: #afb1b8;
-}
-
-.clients-icon:hover,
-.clients-icon:hover {
   fill: var(--accent-color);
 }
 
