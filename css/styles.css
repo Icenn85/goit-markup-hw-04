@@ -141,6 +141,7 @@ img {
 
 .header-contact-link {
   display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -153,7 +154,6 @@ img {
 }
 
 .header-icon {
-  align-items: center;
   margin-right: 10px;
 
   fill: var(--main-text-color);
@@ -494,6 +494,7 @@ img {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -523,8 +524,6 @@ img {
 }
 
 .footer-soc-contact {
-  display: flex;
-  align-items: baseline;
   margin-left: 70px;
 }
 
